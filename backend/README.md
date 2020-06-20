@@ -55,7 +55,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ## API Endpoints
 
-### GET "/categories"
+### GET ```"/categories"```
 
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
 - Request Arguments: None
@@ -77,7 +77,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ```
 
-### GET "/questions?page=<page_number>"
+### GET ```"/questions?page=<page_number>"```
 
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
 - Fetches a dictionary of questions in which the keys are the answer, category, difficulty, id and question.
@@ -119,7 +119,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ```
 
-### DELETE "/questions/<question_id>"
+### DELETE ```"/questions/<question_id>"```
 
 - Delete a question from the list of questions.
 - Request Arguments: Question Id.
@@ -160,7 +160,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ```
 
-### POST "/questions"
+### POST ```"/questions"```
 
 - Creates a new question
 - Request Body: question, answer, difficulty and category.
@@ -190,7 +190,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ```
 
-### POST "/questions/search"
+### POST ```"/questions/search"```
 
 - Searches for the questions
 - Request Arguments: Page Number
@@ -235,7 +235,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ```
 
-### GET "/categories/<int: category_id>/questions"
+### GET ```"/categories/<int: category_id>/questions"```
 
 - To get questions based on a specific category
 - Request Arguments: <category_id> and <page_number>
@@ -275,6 +275,9 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 - Fetch questions to start the trivia game.
 - Request Body: quiz_category and previous_questions.
 - Returns: Randomised questions from the selected category.
+
+
+#### Sample request payload
 
 ```
 
