@@ -142,7 +142,7 @@ def create_app(test_config=None):
   @app.route('/categories/<int:category_id>/questions', methods=['GET'])
   def get_questions_by_category_id(category_id):
     try:
-      questions = Question.query.filter_by(category=category_id).order_by(Question.id).all()
+      questions = Question.query.filter_by(category=str(category_id)).order_by(Question.id).all()
       formatted_questions = pagination(request, questions)
 
       category = Category.query.filter(Category.id == category_id).one_or_none()
