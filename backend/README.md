@@ -269,9 +269,9 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ```
 
-```
-### POST "/quizzes"
-```
+
+### POST ```"/quizzes"```
+
 - Fetch questions to start the trivia game.
 - Request Body: quiz_category and previous_questions.
 - Returns: Randomised questions from the selected category.
