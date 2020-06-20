@@ -58,7 +58,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ### GET ```"/categories"```
 
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
-- Request Arguments: None
+- Request arguments: None
 - Returns: An object with a single key, categories, that contains a object of id: category_string key:value pairs.
 
 
@@ -80,9 +80,9 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ### GET ```"/questions?page=<page_number>"```
 
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
-- Fetches a dictionary of questions in which the keys are the answer, category, difficulty, id and question.
-- Request Arguments: Page Number
-- Returns: List of questions, number of total questions, categories and current category.
+- Fetches a dictionary of questions in which the keys are the answer, category, difficulty, id and question
+- Request arguments: <page_number>
+- Returns: List of questions, number of total questions, categories and current category
 
 #### Sample Response
 
@@ -121,9 +121,9 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ### DELETE ```"/questions/<question_id>"```
 
-- Delete a question from the list of questions.
-- Request Arguments: Question Id.
-- Returns: true if successfully deleted, removes the question from the frontend and returns all questions as above.
+- Delete a question from the list of questions
+- Request arguments: <question_id>
+- Returns: true if successfully deleted, removes the question from the frontend and returns all questions as above
 
 #### Sample Response
 
@@ -163,7 +163,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ### POST ```"/questions"```
 
 - Creates a new question
-- Request Body: question, answer, difficulty and category.
+- Request body: question, answer, difficulty and category.
 - Returns: true if successfully creates a new question.
 
 #### Sample request payload
@@ -193,9 +193,9 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ### POST ```"/questions/search"```
 
 - Searches for the questions
-- Request Arguments: Page Number
-- Request Body: search_term
-- Returns: List of questions, number of total questions and current category.
+- Request arguments: <page_number>
+- Request body: search_term
+- Returns: List of questions, number of total questions and current category
 
 #### Sample request payload
 
@@ -238,8 +238,8 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ### GET ```"/categories/<int: category_id>/questions"```
 
 - To get questions based on a specific category
-- Request Arguments: <category_id> and <page_number>
-- Returns: List of questions, number of total questions, current category and categories.
+- Request arguments: <category_id> and/or <page_number>
+- Returns: List of questions, number of total questions, current category and categories
 
 #### Sample Response
 
@@ -272,9 +272,9 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ### POST ```"/quizzes"```
 
-- Fetch questions to start the trivia game.
-- Request Body: quiz_category and previous_questions.
-- Returns: Randomised questions from the selected category.
+- Fetch questions to start the trivia game
+- Request body: quiz_category and previous_questions
+- Returns: Randomised questions from the selected category
 
 
 #### Sample request payload
